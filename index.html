@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<!--
+  DAVOU — Σταυρούλα Δάβου, Χειρουργός Οφθαλμίατρος, Νέα Πεντέλη · Advon Media · 15 Sept 2026
+  Named style: Dark cinematic (Noto Serif Display 300 + Inter, near-black ground, one brass accent)
+  Skeleton roll:
+    hero ........ typographic hero + the practice photo revealed through an opening iris aperture (once, on load)
+    nav ......... top bar (transparent → solid on scroll), burger ≤ 980px
+    services .... tabs (6 families, 80–150 words each)
+    signature ... VISION SIMULATOR — «Πώς βλέπει ένα μάτι με…» (7 conditions × severity slider)
+    about ....... sticky portrait + scrolling text
+    proof ....... large single-quote rotation (real Google reviews, verbatim)
+    faq ......... two-column list directly before contact
+    contact ..... full-width band: map-on-click + hours + directions + call/email
+  Logo: none supplied → Advon-designed mark (almond eye whose iris is a lens aperture), assets/logo-mark.svg
+  Indexing: PREVIEW state (noindex). Final domain not confirmed → no canonical; sitemap lists davou-ofthalmiatros.gr (her former domain, currently not resolving).
+-->
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Οφθαλμίατρος Νέα Πεντέλη | Σταυρούλα Δάβου</title>
+<meta name="description" content="Χειρουργός Οφθαλμίατρος στη Νέα Πεντέλη: καταρράκτης, laser διαθλαστικών ανωμαλιών, γλαύκωμα, ωχρά κηλίδα και παιδοοφθαλμολογία. Κλείστε ραντεβού.">
+<meta name="theme-color" content="#0E1013">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="el_GR">
+<meta property="og:title" content="Σταυρούλα Δάβου — Χειρουργός Οφθαλμίατρος, Νέα Πεντέλη">
+<meta property="og:description" content="Καταρράκτης, laser, γλαύκωμα, ωχρά κηλίδα και παιδοοφθαλμολογία στην κεντρική πλατεία της Νέας Πεντέλης.">
+<meta property="og:image" content="https://agelmet.github.io/DAVOU/assets/img/ofthalmologiko-iatreio-nea-penteli-1100.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/nsd-greek-300.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-greek-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="assets/img/ofthalmologiko-iatreio-nea-penteli-1100.webp" imagesrcset="assets/img/ofthalmologiko-iatreio-nea-penteli-640.webp 640w, assets/img/ofthalmologiko-iatreio-nea-penteli-1100.webp 1100w" imagesizes="(max-width: 980px) 46vw, 38vw" fetchpriority="high">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+@font-face{font-family:"Noto Serif Display";font-style:normal;font-weight:300;font-display:swap;src:url(assets/fonts/nsd-greek-300.woff2) format("woff2");unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF}
+@font-face{font-family:"Noto Serif Display";font-style:normal;font-weight:300;font-display:swap;src:url(assets/fonts/nsd-latin-300.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/inter-greek-400.woff2) format("woff2");unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF}
+@font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url(assets/fonts/inter-latin-400.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/inter-greek-500.woff2) format("woff2");unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF}
+@font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url(assets/fonts/inter-latin-500.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+:root{
+  --ink:#0E1013; --ink-2:#15181D; --ink-3:#1C2026; --line:rgba(242,239,234,.12); --line-2:rgba(242,239,234,.22);
+  --paper:#F2EFEA; --mute:#9C978F; --mute-2:#C9C4BB; --brass:#C9A96E; --brass-2:#E0C793;
+  --serif:"Noto Serif Display",Georgia,"Times New Roman",serif; --sans:"Inter",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --pad:clamp(20px,5vw,72px); --max:1320px; --ease:cubic-bezier(.22,.8,.24,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ink);color:var(--paper);font:400 16px/1.7 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.eyebrow{font:500 11.5px/1.4 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--brass)}
+h1,h2,h3{font-family:var(--serif);font-weight:300;letter-spacing:-.01em;margin:0}
+h2{font-size:clamp(36px,4.6vw,64px);line-height:1.06}
+h3{font-size:clamp(24px,2.2vw,30px);line-height:1.2}
+p{margin:0 0 1em}
+.lead{font-size:clamp(17px,1.35vw,19px);color:var(--mute-2);max-width:62ch}
+section{position:relative}
+.sec{padding:clamp(88px,11vw,160px) 0}
+.skip{position:absolute;left:-999px;top:8px;background:var(--paper);color:var(--ink);padding:8px 14px;border-radius:8px;z-index:100}
+.skip:focus{left:8px}
+/* grain — static */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;height:54px;padding:0 26px;border-radius:999px;background:var(--paper);color:var(--ink);font-weight:500;font-size:15px;letter-spacing:.01em;transition:transform .35s var(--ease),background .35s}
+.btn svg{width:18px;height:18px}
+.btn:active{transform:scale(.97)}
+.tlink{display:inline-flex;align-items:center;gap:8px;color:var(--paper);font-size:15px;border-bottom:1px solid var(--line-2);padding-bottom:3px;transition:border-color .3s,color .3s}
+.tlink span{transition:transform .35s var(--ease)}
+@media (hover:hover){.btn:hover{background:var(--brass-2);transform:translateY(-2px)}.tlink:hover{border-color:var(--brass);color:var(--brass-2)}.tlink:hover span{transform:translateX(4px)}}
+
+/* header */
+.hdr{position:fixed;inset:0 0 auto;z-index:50;transition:background .4s,border-color .4s,backdrop-filter .4s;border-bottom:1px solid transparent}
+.hdr.solid{background:rgba(14,16,19,.82);-webkit-backdrop-filter:saturate(140%) blur(14px);backdrop-filter:saturate(140%) blur(14px);border-color:var(--line)}
+.hdr .wrap{display:flex;align-items:center;gap:28px;height:84px;max-width:1480px}
+.brand{display:flex;align-items:center;gap:12px;flex:0 0 auto}
+.brand svg{width:48px;height:48px}
+.brand b{display:block;font:300 21px/1.05 var(--serif);letter-spacing:.01em;white-space:nowrap}
+.brand small{display:block;font:500 9.5px/1.3 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-top:4px;white-space:nowrap}
+.nav{display:flex;gap:26px;margin-left:auto}
+.nav a{font-size:13.5px;color:var(--mute-2);position:relative;padding:6px 0;transition:color .3s}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--brass);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+@media (hover:hover){.nav a:hover{color:var(--paper)}.nav a:hover::after{transform:scaleX(1)}}
+.nav a.on{color:var(--paper)}.nav a.on::after{transform:scaleX(1)}
+.hdr-cta{height:42px;padding:0 18px;font-size:13.5px}
+.lang{display:flex;gap:6px}
+.lang button{width:30px;height:21px;border-radius:4px;overflow:hidden;opacity:.45;transition:opacity .3s;border:1px solid var(--line-2);padding:0}
+.lang button[aria-pressed=true]{opacity:1}
+.lang svg{width:100%;height:100%}
+.burger{display:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--line-2);align-items:center;justify-content:center}
+.burger span,.burger span::before{display:block;width:18px;height:1.5px;background:var(--paper);position:relative;transition:transform .35s var(--ease)}
+.burger span::before{content:"";position:absolute;top:6px}
+.burger span{transform:translateY(-3px)}
+.mnav{position:fixed;inset:0;z-index:49;background:var(--ink);padding:110px var(--pad) 40px;display:flex;flex-direction:column;gap:6px;opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s}
+.mnav a{font:300 34px/1.3 var(--serif);border-bottom:1px solid var(--line);padding:10px 0}
+.mnav .btn{margin-top:26px;justify-content:center}
+body.menu .mnav{opacity:1;visibility:visible}
+body.menu .burger span{transform:rotate(45deg)}
+body.menu .burger span::before{transform:translateY(-6px) rotate(-90deg)}
+@media (max-width:1180px){.nav{gap:18px}.nav a:nth-child(5){display:none}}
+@media (max-width:980px){.nav,.hdr-cta{display:none}.burger{display:flex}.lang{margin-left:auto}}
+@media (max-width:420px){.brand small{display:none}.brand b{font-size:19px}.brand svg{width:40px;height:40px}}
+
+/* hero */
+.hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:120px 0 72px;overflow:clip}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 70% at 72% 45%,rgba(201,169,110,.10),transparent 70%),radial-gradient(50% 60% at 10% 90%,rgba(80,110,140,.10),transparent 70%);pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(40px,6vw,96px);align-items:center;width:100%}
+.hero h1{font-size:clamp(52px,6.9vw,100px);line-height:.98;letter-spacing:-.02em;margin:22px 0 28px}
+.hero h1 .k{display:block;font:500 12px/1.5 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--brass);margin-bottom:26px}
+.hero h1 .l{display:block}
+.hero .lead{margin-bottom:38px;max-width:46ch}
+.hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:18px 30px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:56px;padding-top:24px;border-top:1px solid var(--line);font-size:13.5px;color:var(--mute)}
+.hero-meta b{color:var(--paper);font-weight:500}
+.hero-meta .star{color:var(--brass)}
+/* aperture */
+.lens{position:relative;justify-self:end;width:min(100%,520px)}
+.lens-frame{position:relative;aspect-ratio:1363/1800;border-radius:260px 260px 28px 28px;overflow:hidden;background:var(--ink-3);box-shadow:0 60px 120px -40px rgba(0,0,0,.8)}
+.lens-frame img{width:100%;height:100%;object-fit:cover}
+.lens-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,16,19,0) 55%,rgba(14,16,19,.55)),linear-gradient(0deg,rgba(201,169,110,.06),rgba(201,169,110,.06));pointer-events:none}
+.iris{position:absolute;left:50%;top:50%;width:360%;aspect-ratio:1;translate:-50% -50%;pointer-events:none;z-index:2;
+  background:radial-gradient(circle at center,transparent 0 8.5%,rgba(14,16,19,.92) 8.7%,var(--ink) 11%);transform:scale(1)}
+.js .iris{animation:irisOpen 1.9s .25s var(--ease) both}
+@keyframes irisOpen{from{transform:scale(1)}to{transform:scale(7)}}
+.iris-done .iris{display:none}
+.lens-ring{position:absolute;inset:-18px;border:1px solid var(--line);border-radius:278px 278px 40px 40px;pointer-events:none}
+.lens-cap{position:absolute;left:-34px;bottom:44px;z-index:3;background:rgba(21,24,29,.86);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:16px;padding:14px 18px;font-size:12.5px;line-height:1.45;color:var(--mute-2);max-width:230px}
+.lens-cap b{display:block;color:var(--paper);font:300 19px/1.2 var(--serif);margin-bottom:2px}
+.cue{position:absolute;left:50%;bottom:22px;translate:-50% 0;width:1px;height:46px;background:linear-gradient(var(--line-2),transparent)}
+@media (max-width:980px){
+  .hero{padding:112px 0 64px}
+  .hero .wrap{grid-template-columns:1fr}
+  .lens{justify-self:start;width:min(46vw,230px);order:-1;margin:0 0 4px}
+  .lens-ring{inset:-10px}
+  .lens-cap{display:none}
+  .hero h1{margin-top:6px}
+  .hero h1 .k{margin-bottom:18px}
+  .lens-cap{left:-8px;bottom:22px}
+  .cue{display:none}
+}
+@media (prefers-reduced-motion:reduce){.js .iris{animation:none;display:none}}
+
+/* proof strip */
+.proof{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ink-2)}
+.proof .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.pf{padding:30px 26px;border-left:1px solid var(--line);display:flex;flex-direction:column;gap:6px}
+.pf:first-child{border-left:0;padding-left:0}
+.pf b{font:300 22px/1.2 var(--serif)}
+.pf span{font-size:13px;color:var(--mute);line-height:1.5}
+.pf .g{display:flex;align-items:center;gap:8px}
+.pf .g svg{width:18px;height:18px}
+@media (max-width:980px){.proof .wrap{grid-template-columns:1fr 1fr}.pf:nth-child(3){border-left:0;padding-left:0}.pf:nth-child(n+3){border-top:1px solid var(--line)}}
+@media (max-width:560px){.proof .wrap{grid-template-columns:1fr}.pf{border-left:0;padding:22px 0}.pf+.pf{border-top:1px solid var(--line)}}
+
+/* services tabs */
+.sv-head h2{margin-top:18px}
+.sv-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:64px}
+.sv-head .lead{margin:0}
+.tabs{display:grid;grid-template-columns:340px 1fr;gap:clamp(32px,5vw,80px);align-items:start}
+.tablist{display:flex;flex-direction:column;border-top:1px solid var(--line);position:sticky;top:110px}
+.tab{display:flex;align-items:center;gap:16px;text-align:left;padding:20px 4px;border-bottom:1px solid var(--line);color:var(--mute);font:300 23px/1.2 var(--serif);transition:color .3s,padding .35s var(--ease)}
+.tab i{font:500 11px/1 var(--sans);font-style:normal;letter-spacing:.14em;color:var(--mute);width:22px}
+.tab[aria-selected=true]{color:var(--paper);padding-left:14px}
+.tab[aria-selected=true] i{color:var(--brass)}
+@media (hover:hover){.tab:hover{color:var(--paper)}}
+.panel{min-height:420px}
+.panel[hidden]{display:none}
+.panel h3{font-size:clamp(32px,3.4vw,46px);margin:6px 0 22px}
+.panel p{color:var(--mute-2);font-size:17px;max-width:64ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px;padding:0;list-style:none}
+.chips li{font-size:13px;border:1px solid var(--line-2);border-radius:999px;padding:7px 14px;color:var(--mute-2)}
+.js .panel.enter{animation:pIn .45s var(--ease) both}
+@keyframes pIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (max-width:980px){.sv-head{grid-template-columns:1fr;gap:18px;margin-bottom:40px}.tabs{grid-template-columns:1fr}.tablist{position:static;flex-direction:row;overflow-x:auto;border-top:0;gap:8px;scrollbar-width:none;margin:0 calc(var(--pad)*-1);padding:0 var(--pad)}.tablist::-webkit-scrollbar{display:none}.tab{flex:0 0 auto;border:1px solid var(--line-2);border-radius:999px;padding:10px 16px;font:500 13.5px/1 var(--sans)}.tab i{display:none}.tab[aria-selected=true]{padding-left:16px;background:var(--paper);color:var(--ink);border-color:var(--paper)}.panel{min-height:0}}
+
+/* simulator */
+.sim{background:var(--ink-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:clip}
+.sim-head{max-width:760px;margin-bottom:56px}
+.sim-head h2{margin:18px 0 22px}
+.sim-grid{display:grid;grid-template-columns:320px 1fr;gap:clamp(28px,4vw,64px);align-items:start}
+.conds{display:flex;flex-direction:column;gap:6px}
+.cond{display:flex;justify-content:space-between;align-items:center;gap:12px;text-align:left;padding:14px 18px;border-radius:14px;border:1px solid transparent;color:var(--mute-2);font-size:15px;transition:background .3s,border-color .3s,color .3s}
+.cond::after{content:"";width:8px;height:8px;border-radius:50%;border:1px solid var(--line-2);flex:0 0 auto;transition:background .3s,border-color .3s}
+.cond[aria-pressed=true]{background:var(--ink-3);border-color:var(--line-2);color:var(--paper)}
+.cond[aria-pressed=true]::after{background:var(--brass);border-color:var(--brass)}
+@media (hover:hover){.cond:hover{color:var(--paper)}}
+.sev{margin-top:26px;padding:20px 18px;border:1px solid var(--line);border-radius:16px}
+.sev label{display:flex;justify-content:space-between;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin-bottom:14px}
+.sev output{color:var(--brass)}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:28px;background:transparent}
+input[type=range]::-webkit-slider-runnable-track{height:2px;background:linear-gradient(90deg,var(--brass) var(--p,60%),var(--line-2) var(--p,60%))}
+input[type=range]::-moz-range-track{height:2px;background:var(--line-2)}
+input[type=range]::-moz-range-progress{height:2px;background:var(--brass)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--paper);margin-top:-10px;box-shadow:0 0 0 6px rgba(201,169,110,.18)}
+input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--paper);border:0}
+.stage{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:16/10;background:#b9c9d6;border:1px solid var(--line);isolation:isolate}
+.scene{position:absolute;inset:0;width:100%;height:100%;transition:filter .5s var(--ease)}
+.ov{position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .5s var(--ease)}
+.ov-tunnel{background:radial-gradient(circle at 50% 50%,transparent 0 calc(46% - var(--s)*30%),rgba(6,7,9,.97) calc(62% - var(--s)*30%))}
+.ov-amd{background:radial-gradient(circle at 50% 48%,rgba(20,18,16,.96) 0 calc(var(--s)*10%),rgba(40,36,30,.6) calc(var(--s)*16%),transparent calc(var(--s)*26% + 2%))}
+.ov-haze{background:radial-gradient(circle at 50% 40%,rgba(255,244,214,.55),rgba(214,190,140,.35));mix-blend-mode:screen}
+.ov-spots{background:
+ radial-gradient(circle at 22% 30%,rgba(10,10,10,.85) 0 2.2%,transparent 3.4%),radial-gradient(circle at 64% 22%,rgba(10,10,10,.8) 0 1.6%,transparent 2.8%),
+ radial-gradient(circle at 44% 62%,rgba(10,10,10,.85) 0 3%,transparent 4.6%),radial-gradient(circle at 78% 58%,rgba(10,10,10,.8) 0 2%,transparent 3.2%),
+ radial-gradient(circle at 30% 78%,rgba(10,10,10,.8) 0 1.8%,transparent 3%),radial-gradient(circle at 56% 40%,rgba(10,10,10,.7) 0 1.3%,transparent 2.4%),
+ radial-gradient(circle at 86% 30%,rgba(10,10,10,.75) 0 1.5%,transparent 2.6%),radial-gradient(circle at 12% 55%,rgba(10,10,10,.7) 0 1.4%,transparent 2.6%)}
+.stage-tag{position:absolute;left:16px;top:16px;z-index:3;font:500 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;background:rgba(14,16,19,.72);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);padding:9px 12px;border-radius:999px;color:var(--paper)}
+.sim-text{display:grid;grid-template-columns:1.3fr 1fr;gap:32px;margin-top:28px;align-items:start}
+.sim-text h3{margin-bottom:10px}
+.sim-text p{color:var(--mute-2);margin:0}
+.sim-when{border-left:1px solid var(--brass);padding-left:20px}
+.sim-when span{display:block;font:500 11px/1.4 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--brass);margin-bottom:8px}
+.disc{margin-top:22px;font-size:12.5px;color:var(--mute)}
+@media (max-width:980px){.sim-grid{grid-template-columns:1fr}.conds{flex-direction:row;overflow-x:auto;scrollbar-width:none;margin:0 calc(var(--pad)*-1);padding:0 var(--pad)}.conds::-webkit-scrollbar{display:none}.cond{flex:0 0 auto;border-color:var(--line-2);border-radius:999px;padding:10px 16px;font-size:13.5px}.cond::after{display:none}.cond[aria-pressed=true]{background:var(--paper);color:var(--ink)}.sim-left{display:contents}.sev{order:3;margin-top:0}.sim-grid>.sim-right{order:2}.sim-text{grid-template-columns:1fr;gap:18px}.stage{aspect-ratio:4/3;border-radius:20px}}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:.8fr 1fr;gap:clamp(40px,7vw,120px);align-items:start}
+.portrait{position:sticky;top:110px}
+.portrait figure{margin:0;position:relative;aspect-ratio:1164/1800;border-radius:24px;overflow:hidden;background:var(--ink-3)}
+.portrait img{width:100%;height:100%;object-fit:contain}
+.portrait figure::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(14,16,19,.45)),linear-gradient(0deg,rgba(201,169,110,.05),rgba(201,169,110,.05))}
+.portrait figcaption{margin-top:16px;font-size:13px;color:var(--mute)}
+.about h2{margin:18px 0 34px}
+.about .lead{margin-bottom:22px}
+.about p{color:var(--mute-2)}
+.cv{list-style:none;padding:0;margin:48px 0 0;border-top:1px solid var(--line)}
+.cv li{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid var(--line)}
+.cv small{font:500 11px/1.6 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--brass)}
+.cv b{display:block;font:300 21px/1.3 var(--serif);font-weight:300}
+.cv span{font-size:14px;color:var(--mute)}
+@media (max-width:980px){.about .wrap{grid-template-columns:1fr}.portrait{position:static;max-width:320px}}
+@media (max-width:560px){.cv li{grid-template-columns:1fr;gap:6px}}
+
+/* reviews */
+.rv-wrap{display:grid;grid-template-columns:1fr 2.2fr;gap:clamp(32px,6vw,100px);align-items:start}
+.score{border-top:1px solid var(--line);padding-top:26px}
+.score .big{font:300 110px/1 var(--serif);letter-spacing:-.03em}
+.stars{color:var(--brass);letter-spacing:.2em;font-size:16px}
+.score p{color:var(--mute);font-size:14px;margin:12px 0 26px}
+.quote{position:relative;min-height:340px}
+.q{margin:0;position:absolute;inset:0;opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .5s var(--ease),transform .5s var(--ease),visibility .5s}
+.q.on{opacity:1;visibility:visible;transform:none;position:relative}
+.q blockquote{margin:0;font:300 clamp(28px,3.1vw,44px)/1.25 var(--serif);letter-spacing:-.005em}
+.q blockquote::before{content:"«"}.q blockquote::after{content:"»"}
+.q footer{margin-top:28px;display:flex;align-items:center;gap:14px;font-size:14px;color:var(--mute)}
+.q footer b{color:var(--paper);font-weight:500}
+.av{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font-weight:500;color:var(--ink);background:var(--brass)}
+.q-nav{display:flex;align-items:center;gap:18px;margin-top:40px}
+.q-nav button.arr{width:48px;height:48px;border-radius:50%;border:1px solid var(--line-2);display:grid;place-items:center;transition:background .3s,color .3s}
+.q-nav button.arr svg{width:18px;height:18px}
+@media (hover:hover){.q-nav button.arr:hover{background:var(--paper);color:var(--ink)}}
+.q-count{font:500 12px/1 var(--sans);letter-spacing:.16em;color:var(--mute);min-width:64px;text-align:center}
+.q-bar{flex:1;height:1px;background:var(--line);position:relative;overflow:hidden}
+.q-bar i{position:absolute;inset:0;background:var(--brass);transform-origin:left;transform:scaleX(0)}
+@media (max-width:980px){.q blockquote{font-size:25px;line-height:1.32}.rv-wrap{grid-template-columns:1fr}.score{display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px}.score .big{font-size:72px}.score p{margin:0;flex-basis:100%}.quote{min-height:0}}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(28px,5vw,80px);margin-top:56px}
+.faq-col{border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:24px 0;font:300 21px/1.35 var(--serif)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";flex:0 0 auto;width:12px;height:12px;background:linear-gradient(var(--brass),var(--brass)) center/100% 1px no-repeat,linear-gradient(var(--brass),var(--brass)) center/1px 100% no-repeat;transition:transform .35s var(--ease)}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--mute-2);margin:-6px 0 24px;max-width:60ch}
+@media (max-width:860px){.faq-grid{grid-template-columns:1fr}.faq-col+.faq-col{border-top:0}}
+
+/* contact */
+.contact{background:var(--ink-2);border-top:1px solid var(--line)}
+.ct{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(32px,5vw,80px);align-items:stretch}
+.map{position:relative;border-radius:28px;overflow:hidden;border:1px solid var(--line);min-height:460px;background:#1a1e24}
+.map svg.m{position:absolute;inset:0;width:100%;height:100%}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.3) contrast(1.05)}
+.map-btn{position:absolute;left:50%;bottom:26px;translate:-50% 0;z-index:2}
+.pin{position:absolute;left:50%;top:44%;translate:-50% -100%;z-index:2;display:flex;flex-direction:column;align-items:center;gap:10px}
+.pin span{background:var(--paper);color:var(--ink);font-size:13px;font-weight:500;padding:8px 14px;border-radius:999px;white-space:nowrap}
+.pin i{width:16px;height:16px;border-radius:50%;background:var(--brass);box-shadow:0 0 0 8px rgba(201,169,110,.2),0 0 0 18px rgba(201,169,110,.08)}
+.ct-info h2{margin:18px 0 26px}
+.rows{list-style:none;padding:0;margin:0 0 30px;border-top:1px solid var(--line)}
+.rows li{display:grid;grid-template-columns:120px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+.rows small{font:500 11px/1.9 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.rows a{border-bottom:1px solid var(--line-2)}
+address{font-style:normal}
+.dir{color:var(--mute-2);font-size:15px;margin-bottom:30px}
+.ct-cta{display:flex;flex-wrap:wrap;gap:16px 26px;align-items:center}
+@media (max-width:980px){.ct{grid-template-columns:1fr}.map{min-height:340px;order:2}}
+@media (max-width:480px){.rows li{grid-template-columns:1fr;gap:2px}}
+
+/* footer */
+.ftr{padding:72px 0 120px;border-top:1px solid var(--line)}
+.ftr .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+.ftr p,.ftr li{color:var(--mute);font-size:14px}
+.ftr ul{list-style:none;padding:0;margin:0}
+.ftr li{margin-bottom:8px}
+.ftr h4{margin:0 0 14px;font:500 11px/1.4 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--paper)}
+.ftr .brand{margin-bottom:20px}
+.legal{grid-column:1/-1;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;border-top:1px solid var(--line);padding-top:24px;margin-top:20px;font-size:13px;color:var(--mute)}
+.legal a{color:var(--paper);border-bottom:1px solid var(--line-2)}
+@media (max-width:860px){.ftr .wrap{grid-template-columns:1fr}.ftr{padding-bottom:130px}}
+
+/* mobile bar */
+.mbar{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:48;display:none;grid-template-columns:repeat(3,1fr);background:rgba(21,24,29,.92);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid var(--line-2);border-radius:20px;padding:6px}
+.mbar a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 0;font-size:11.5px;color:var(--mute-2);border-radius:14px}
+.mbar a svg{width:20px;height:20px}
+.mbar a.p{background:var(--paper);color:var(--ink)}
+@media (max-width:980px){.mbar{display:grid}}
+
+/* reveals — only when JS is ready */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.06s}.rv.d2{transition-delay:.12s}.rv.d3{transition-delay:.18s}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.scene,.ov,.q{transition:none}}
+.ic{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#main" data-en="Skip to content">Μετάβαση στο περιεχόμενο</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="mark" viewBox="0 0 64 64">
+      <path d="M4 32 C 14 14, 50 14, 60 32 C 50 50, 14 50, 4 32 Z" fill="none" stroke="#C9A96E" stroke-width="2" stroke-linejoin="round"/>
+      <circle cx="32" cy="32" r="13" fill="none" stroke="#C9A96E" stroke-width="1.6"/>
+      <g fill="none" stroke="#C9A96E" stroke-width="1.2" stroke-linecap="round"><path d="M32 19 Q 38 24 37.5 28.5"/><path d="M41.2 22.8 Q 41.8 30.2 37.9 32.9"/><path d="M45 32 Q 40 38 35.5 37.5"/><path d="M41.2 41.2 Q 33.8 41.8 31.1 37.9"/><path d="M32 45 Q 26 40 26.5 35.5"/><path d="M22.8 41.2 Q 22.2 33.8 26.1 31.1"/><path d="M19 32 Q 24 26 28.5 26.5"/><path d="M22.8 22.8 Q 30.2 22.2 32.9 26.1"/></g>
+      <circle cx="32" cy="32" r="4.2" fill="#C9A96E"/><circle cx="35.6" cy="27.6" r="1.6" fill="#F2EFEA"/>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path class="ic" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect class="ic" x="3" y="4" width="18" height="17" rx="2"/><path class="ic" d="M8 2v4M16 2v4M3 10h18"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path class="ic" d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle class="ic" cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-arr" viewBox="0 0 24 24"><path class="ic" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path class="ic" d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+    <!-- simulator filters -->
+    <filter id="f-astig" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur id="astigBlur" stdDeviation="6 0.6"/></filter>
+    <filter id="f-amd" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="4" result="t"/><feDisplacementMap id="amdDisp" in="SourceGraphic" in2="t" scale="18" xChannelSelector="R" yChannelSelector="G"/></filter>
+  </defs>
+</svg>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Σταυρούλα Δάβου — αρχή της σελίδας" data-en-aria="Stavroula Davou — back to top">
+      <svg aria-hidden="true"><use href="#mark"/></svg>
+      <span><b data-en="Stavroula Davou">Σταυρούλα Δάβου</b><small data-en="Ophthalmic surgeon · Nea Penteli">Χειρουργός Οφθαλμίατρος · Ν. Πεντέλη</small></span>
+    </a>
+    <nav class="nav" aria-label="Κύρια πλοήγηση" data-en-aria="Main navigation">
+      <a href="#ypiresies" data-en="Services">Υπηρεσίες</a>
+      <a href="#prosomoiotis" data-en="Vision simulator">Προσομοιωτής όρασης</a>
+      <a href="#i-giatros" data-en="The doctor">Η γιατρός</a>
+      <a href="#axiologiseis" data-en="Reviews">Αξιολογήσεις</a>
+      <a href="#erotiseis" data-en="FAQ">Ερωτήσεις</a>
+      <a href="#epikoinonia" data-en="Contact">Επικοινωνία</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Γλώσσα" data-en-aria="Language">
+      <button type="button" data-lang="el" aria-pressed="true" aria-label="Ελληνικά"><svg viewBox="0 0 27 18" preserveAspectRatio="xMidYMid slice"><rect width="27" height="18" fill="#0D5EAF"/><path d="M0 3h27M0 7h27M0 11h27M0 15h27" stroke="#fff" stroke-width="2"/><rect width="10" height="10" fill="#0D5EAF"/><path d="M5 0v10M0 5h10" stroke="#fff" stroke-width="2"/></svg></button>
+      <button type="button" data-lang="en" aria-pressed="false" aria-label="English"><svg viewBox="0 0 60 30" preserveAspectRatio="xMidYMid slice"><rect width="60" height="30" fill="#012169"/><path d="M0 0l60 30M60 0L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0l60 30M60 0L0 30" stroke="#C8102E" stroke-width="2.4"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"/></svg></button>
+    </div>
+    <a class="btn hdr-cta" href="tel:+302108100153"><svg aria-hidden="true"><use href="#i-phone"/></svg><span data-en="210 810 0153">210 810 0153</span></a>
+    <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="mnav" aria-label="Μενού" data-en-aria="Menu"><span></span></button>
+  </div>
+</header>
+
+<div class="mnav" id="mnav">
+  <nav class="mob-nav" aria-label="Μενού κινητού" data-en-aria="Mobile menu">
+    <a href="#ypiresies" data-en="Services">Υπηρεσίες</a>
+    <a href="#prosomoiotis" data-en="Vision simulator">Προσομοιωτής όρασης</a>
+    <a href="#i-giatros" data-en="The doctor">Η γιατρός</a>
+    <a href="#axiologiseis" data-en="Reviews">Αξιολογήσεις</a>
+    <a href="#erotiseis" data-en="FAQ">Ερωτήσεις</a>
+    <a href="#epikoinonia" data-en="Contact">Επικοινωνία</a>
+  </nav>
+  <a class="btn" href="tel:+302108100153"><svg aria-hidden="true"><use href="#i-phone"/></svg><span data-en="Call 210 810 0153">Κλήση 210 810 0153</span></a>
+</div>
+
+<main id="main">
+<!-- HERO -->
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div>
+      <h1 id="h1">
+        <span class="k" data-en="Ophthalmologist in Nea Penteli · Stavroula Davou, MD, FEBO">Οφθαλμίατρος στη Νέα Πεντέλη · Σταυρούλα Δάβου</span>
+        <span class="l" data-en="See clearly.">Να βλέπετε</span>
+        <span class="l" data-en="Every detail.">καθαρά.</span>
+      </h1>
+      <p class="lead" data-en="Surgical ophthalmology with the time and patience of a neighbourhood practice — cataract, laser vision correction, glaucoma, the macula and children’s eyes, on the central square of Nea Penteli.">Χειρουργική οφθαλμολογία με τον χρόνο και την υπομονή ενός ιατρείου της γειτονιάς — καταρράκτης, laser διαθλαστικών ανωμαλιών, γλαύκωμα, ωχρά κηλίδα και παιδικά μάτια, στην κεντρική πλατεία της Νέας Πεντέλης.</p>
+      <div class="hero-cta">
+        <a class="btn" href="tel:+302108100153"><svg aria-hidden="true"><use href="#i-phone"/></svg><span data-en="Book an appointment">Κλείστε ραντεβού</span></a>
+        <a class="tlink" href="#prosomoiotis"><em style="font-style:normal" data-en="See how an eye with cataract sees">Δείτε πώς βλέπει ένα μάτι με καταρράκτη</em> <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-meta">
+        <span><span class="star">★★★★★</span> <b>5,0</b> <span data-en="on Google">στο Google</span></span>
+        <span data-en="Mon–Fri · 09:00–21:00 · by appointment">Δευ–Παρ · 09:00–21:00 · κατόπιν ραντεβού</span>
+        <span data-en="7 Iroon Polytechniou St.">Ηρ. Πολυτεχνείου 7</span>
+      </div>
+    </div>
+    <div class="lens">
+      <div class="lens-ring" aria-hidden="true"></div>
+      <div class="lens-frame">
+        <img src="assets/img/ofthalmologiko-iatreio-nea-penteli-1100.webp" srcset="assets/img/ofthalmologiko-iatreio-nea-penteli-640.webp 640w, assets/img/ofthalmologiko-iatreio-nea-penteli-1100.webp 1100w" sizes="(max-width: 980px) 46vw, 38vw" width="1100" height="1453" alt="Το εξεταστήριο του οφθαλμολογικού ιατρείου στη Νέα Πεντέλη με σχισμοειδή λυχνία και αυτόματο διαθλασίμετρο" data-en-alt="The examination room of the eye practice in Nea Penteli, with a slit lamp and an autorefractor" fetchpriority="high" decoding="async">
+        <div class="iris" aria-hidden="true"></div>
+      </div>
+      <p class="lens-cap"><b data-en="The examination room">Το εξεταστήριο</b><span data-en="Slit lamp, autorefractor and the tests of a complete eye exam, in one room.">Σχισμοειδής λυχνία, διαθλασίμετρο και όλες οι εξετάσεις ενός πλήρους ελέγχου, σε έναν χώρο.</span></p>
+    </div>
+  </div>
+  <span class="cue" aria-hidden="true"></span>
+</section>
+
+<!-- PROOF -->
+<section class="proof" aria-label="Σπουδές και διακρίσεις" data-en-aria="Training and credentials">
+  <div class="wrap">
+    <div class="pf rv"><b data-en="Athens Medical School">Ιατρική Σχολή Αθηνών</b><span data-en="National and Kapodistrian University of Athens">Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών</span></div>
+    <div class="pf rv d1"><b data-en="Residency in Ophthalmology">Ειδικότητα Οφθαλμολογίας</b><span data-en="1st University Eye Clinic, «G. Gennimatas» General Hospital of Athens">Α΄ Πανεπιστημιακή Οφθαλμολογική Κλινική, ΓΝΑ «Γ. Γεννηματάς»</span></div>
+    <div class="pf rv d2"><b>FEBO</b><span data-en="Fellow of the European Board of Ophthalmology">Ευρωπαϊκός Τίτλος Οφθαλμολογίας (Fellow of the European Board of Ophthalmology)</span></div>
+    <div class="pf rv d3"><b class="g"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2A11.9 11.9 0 0 1 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3a12 12 0 0 1-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg>5,0 ★</b><span data-en="Dozens of reviews on Google">Δεκάδες αξιολογήσεις στο Google</span></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="sec" id="ypiresies" aria-labelledby="sv-h">
+  <div class="wrap">
+    <div class="sv-head">
+      <div>
+        <p class="eyebrow rv" data-en="Services">Υπηρεσίες</p>
+        <h2 id="sv-h" class="rv d1" data-en="Eye care, from the first check to surgery">Οφθαλμολογική φροντίδα, από τον πρώτο έλεγχο ως το χειρουργείο</h2>
+      </div>
+      <p class="lead rv d2" data-en="Every visit starts with a complete examination and a clear explanation of what it showed — so that you know exactly what happens next.">Κάθε επίσκεψη ξεκινά με πλήρη εξέταση και μια καθαρή εξήγηση του τι έδειξε — ώστε να ξέρετε ακριβώς ποιο είναι το επόμενο βήμα.</p>
+    </div>
+    <div class="tabs">
+      <div class="tablist" role="tablist" aria-label="Κατηγορίες υπηρεσιών" data-en-aria="Service categories">
+        <button class="tab" role="tab" id="t1" aria-controls="p1" aria-selected="true"><i>01</i><span data-en="Cataract">Καταρράκτης</span></button>
+        <button class="tab" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1"><i>02</i><span data-en="Laser vision correction">Laser διαθλαστικών</span></button>
+        <button class="tab" role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1"><i>03</i><span data-en="Glaucoma">Γλαύκωμα</span></button>
+        <button class="tab" role="tab" id="t4" aria-controls="p4" aria-selected="false" tabindex="-1"><i>04</i><span data-en="Retina &amp; macula">Αμφιβληστροειδής &amp; ωχρά κηλίδα</span></button>
+        <button class="tab" role="tab" id="t5" aria-controls="p5" aria-selected="false" tabindex="-1"><i>05</i><span data-en="Children’s eyes">Παιδοοφθαλμολογία</span></button>
+        <button class="tab" role="tab" id="t6" aria-controls="p6" aria-selected="false" tabindex="-1"><i>06</i><span data-en="Complete eye exam">Πλήρης οφθαλμολογικός έλεγχος</span></button>
+      </div>
+      <div>
+        <div class="panel" role="tabpanel" id="p1" aria-labelledby="t1" tabindex="0">
+          <p class="eyebrow" data-en="Cataract surgery">Χειρουργική καταρράκτη</p>
+          <h3 data-en="When the lens clouds over">Όταν ο φακός του ματιού θολώνει</h3>
+          <p data-en="Cataract is the gradual clouding of the eye’s natural lens. Colours fade, night driving becomes tiring, glare from headlights grows, and glasses stop helping as much as they used to. It is part of ageing for most people, but it can also appear earlier — after injury, with diabetes or with long-term use of certain medicines.">Ο καταρράκτης είναι η σταδιακή θόλωση του φυσικού φακού του ματιού. Τα χρώματα ξεθωριάζουν, η οδήγηση το βράδυ κουράζει, η αντανάκλαση από τα φώτα μεγαλώνει και τα γυαλιά δεν βοηθούν όπως πριν. Για τους περισσότερους ανθρώπους είναι μέρος της ηλικίας, μπορεί όμως να εμφανιστεί και νωρίτερα — μετά από τραυματισμό, με σακχαρώδη διαβήτη ή με μακροχρόνια λήψη ορισμένων φαρμάκων.</p>
+          <p data-en="The only treatment is surgery: the clouded lens is removed and replaced with a clear artificial intraocular lens. Dr Davou assesses when surgery is actually worth doing, measures the eye for the right lens and explains every step before, during and after the operation, with close follow-up afterwards.">Η μόνη θεραπεία είναι χειρουργική: ο θολός φακός αφαιρείται και αντικαθίσταται από έναν διαυγή τεχνητό ενδοφακό. Η κα Δάβου εκτιμά πότε το χειρουργείο πραγματικά αξίζει, κάνει τις μετρήσεις για τον κατάλληλο φακό και εξηγεί κάθε βήμα πριν, κατά τη διάρκεια και μετά την επέμβαση, με στενή παρακολούθηση στη συνέχεια.</p>
+          <ul class="chips"><li data-en="Cataract assessment">Εκτίμηση καταρράκτη</li><li data-en="Pre-operative measurements">Προεγχειρητικές μετρήσεις</li><li data-en="Post-operative follow-up">Μετεγχειρητική παρακολούθηση</li><li data-en="YAG laser capsulotomy">YAG laser</li></ul>
+        </div>
+        <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" tabindex="0" hidden>
+          <p class="eyebrow" data-en="Refractive laser">Laser διαθλαστικών ανωμαλιών</p>
+          <h3 data-en="Life with fewer glasses">Ζωή με λιγότερα γυαλιά</h3>
+          <p data-en="Myopia, hyperopia and astigmatism are refractive errors: the eye does not focus light exactly on the retina. Laser vision correction reshapes the cornea so that the image falls where it should, reducing or removing the need for glasses and contact lenses.">Η μυωπία, η υπερμετρωπία και ο αστιγματισμός είναι διαθλαστικές ανωμαλίες: το μάτι δεν εστιάζει το φως ακριβώς πάνω στον αμφιβληστροειδή. Το laser διαθλαστικών ανωμαλιών αλλάζει με ακρίβεια το σχήμα του κερατοειδούς, ώστε η εικόνα να πέφτει εκεί που πρέπει, και μειώνει ή καταργεί την ανάγκη για γυαλιά και φακούς επαφής.</p>
+          <p data-en="Not every eye is a candidate. Before any recommendation, Dr Davou checks corneal thickness and shape with pachymetry and topography, confirms that the prescription is stable and explains honestly what to expect — including options for presbyopia after the age of forty.">Δεν είναι κάθε μάτι κατάλληλο. Πριν από οποιαδήποτε σύσταση, η κα Δάβου ελέγχει το πάχος και το σχήμα του κερατοειδούς με παχυμετρία και τοπογραφία, επιβεβαιώνει ότι ο βαθμός είναι σταθερός και εξηγεί με ειλικρίνεια τι να περιμένετε — μαζί με τις επιλογές για την πρεσβυωπία μετά τα σαράντα.</p>
+          <ul class="chips"><li data-en="Myopia">Μυωπία</li><li data-en="Hyperopia">Υπερμετρωπία</li><li data-en="Astigmatism">Αστιγματισμός</li><li data-en="Presbyopia">Πρεσβυωπία</li><li data-en="Pachymetry">Παχυμετρία</li><li data-en="Corneal topography">Τοπογραφία κερατοειδούς</li></ul>
+        </div>
+        <div class="panel" role="tabpanel" id="p3" aria-labelledby="t3" tabindex="0" hidden>
+          <p class="eyebrow" data-en="Glaucoma">Γλαύκωμα</p>
+          <h3 data-en="The silent thief of sight">Ο σιωπηλός κλέφτης της όρασης</h3>
+          <p data-en="Glaucoma damages the optic nerve slowly and, in its most common form, without any pain or early symptoms. Side vision narrows first, which is why many people only notice it late. The damage cannot be reversed — but with early diagnosis and regular monitoring it can be stopped or slowed down.">Το γλαύκωμα βλάπτει σιγά σιγά το οπτικό νεύρο και, στη συχνότερη μορφή του, χωρίς πόνο και χωρίς πρώιμα συμπτώματα. Πρώτα στενεύει η περιφερική όραση, γι’ αυτό πολλοί το αντιλαμβάνονται αργά. Η βλάβη δεν αναστρέφεται — με έγκαιρη διάγνωση και τακτική παρακολούθηση όμως μπορεί να σταματήσει ή να επιβραδυνθεί.</p>
+          <p data-en="The glaucoma work-up includes eye pressure measurement, visual field analysis, corneal pachymetry and imaging of the optic nerve. Treatment is tailored to each person: drops, laser treatment such as SLT, and a follow-up schedule you can actually keep.">Ο έλεγχος για γλαύκωμα περιλαμβάνει μέτρηση της ενδοφθάλμιας πίεσης, ανάλυση οπτικών πεδίων, παχυμετρία κερατοειδούς και απεικόνιση του οπτικού νεύρου. Η θεραπεία προσαρμόζεται σε κάθε άνθρωπο: σταγόνες, laser όπως το SLT και ένα πρόγραμμα παρακολούθησης που μπορείτε πραγματικά να τηρήσετε.</p>
+          <ul class="chips"><li data-en="Tonometry">Τονομέτρηση</li><li data-en="Visual field analysis">Ανάλυση οπτικών πεδίων</li><li>OCT</li><li data-en="SLT laser">SLT laser</li><li data-en="Pachymetry">Παχυμετρία</li></ul>
+        </div>
+        <div class="panel" role="tabpanel" id="p4" aria-labelledby="t4" tabindex="0" hidden>
+          <p class="eyebrow" data-en="Retina &amp; macula">Αμφιβληστροειδής &amp; ωχρά κηλίδα</p>
+          <h3 data-en="The centre of what you see">Το κέντρο αυτού που βλέπετε</h3>
+          <p data-en="The macula is the small central part of the retina that gives us sharp detail — reading, faces, driving. Age-related macular degeneration and diabetic retinopathy are among the most common causes of vision loss in adults, and both are far easier to manage when they are found early.">Η ωχρά κηλίδα είναι το μικρό κεντρικό τμήμα του αμφιβληστροειδούς που μας δίνει την καθαρή λεπτομέρεια — το διάβασμα, τα πρόσωπα, την οδήγηση. Η ηλικιακή εκφύλιση της ωχράς κηλίδας και η διαβητική αμφιβληστροειδοπάθεια είναι από τις συχνότερες αιτίες απώλειας όρασης στους ενήλικες, και οι δύο αντιμετωπίζονται πολύ καλύτερα όταν εντοπίζονται νωρίς.</p>
+          <p data-en="Dr Davou examines the fundus, uses OCT imaging and fluorescein angiography where needed, and follows up retinal diseases including intravitreal injection treatment and laser for diabetic retinopathy. People with diabetes are advised to have their retina checked at least once a year.">Η κα Δάβου εξετάζει τον βυθό του ματιού, χρησιμοποιεί απεικόνιση OCT και φλουοροαγγειογραφία όπου χρειάζεται και παρακολουθεί τις παθήσεις του αμφιβληστροειδούς, μαζί με τη θεραπεία με ενδοϋαλοειδικές ενέσεις και το laser για τη διαβητική αμφιβληστροειδοπάθεια. Σε όσους έχουν διαβήτη συνιστάται έλεγχος του αμφιβληστροειδούς τουλάχιστον μία φορά τον χρόνο.</p>
+          <ul class="chips"><li data-en="Fundoscopy">Βυθοσκόπηση</li><li>OCT</li><li data-en="Fluorescein angiography">Φλουοροαγγειογραφία</li><li data-en="Intravitreal injections">Ενδοϋαλοειδικές ενέσεις</li><li data-en="Argon laser">Argon laser</li><li data-en="Retinal detachment">Αποκόλληση αμφιβληστροειδούς</li></ul>
+        </div>
+        <div class="panel" role="tabpanel" id="p5" aria-labelledby="t5" tabindex="0" hidden>
+          <p class="eyebrow" data-en="Paediatric ophthalmology">Παιδοοφθαλμολογία</p>
+          <h3 data-en="Small eyes, careful hands">Μικρά μάτια, προσεκτικά χέρια</h3>
+          <p data-en="Children rarely say that they cannot see well — they simply get used to it. A child who sits too close to the television, squints, tilts the head or tires quickly at school may need glasses. Early checks matter most for amblyopia (“lazy eye”) and strabismus, which respond best to treatment in the first years of life.">Τα παιδιά σπάνια λένε ότι δεν βλέπουν καλά — απλώς το συνηθίζουν. Ένα παιδί που κάθεται πολύ κοντά στην τηλεόραση, μισοκλείνει τα μάτια, γέρνει το κεφάλι ή κουράζεται γρήγορα στο σχολείο μπορεί να χρειάζεται γυαλιά. Ο έγκαιρος έλεγχος μετράει πιο πολύ για την αμβλυωπία («τεμπέλικο μάτι») και τον στραβισμό, που ανταποκρίνονται καλύτερα στη θεραπεία τα πρώτα χρόνια της ζωής.</p>
+          <p data-en="The examination is adapted to the child’s age, calm and unhurried, with parents present throughout — so that the first visit to the eye doctor is a good memory.">Η εξέταση προσαρμόζεται στην ηλικία του παιδιού, γίνεται ήρεμα και χωρίς βιασύνη, με τους γονείς παρόντες σε όλη τη διάρκεια — ώστε η πρώτη επίσκεψη στον οφθαλμίατρο να μείνει καλή ανάμνηση.</p>
+          <ul class="chips"><li data-en="Pre-school check">Προσχολικός έλεγχος</li><li data-en="Glasses for children">Γυαλιά για παιδιά</li><li data-en="Amblyopia">Αμβλυωπία</li><li data-en="Strabismus">Στραβισμός</li></ul>
+        </div>
+        <div class="panel" role="tabpanel" id="p6" aria-labelledby="t6" tabindex="0" hidden>
+          <p class="eyebrow" data-en="Complete eye examination">Πλήρης οφθαλμολογικός έλεγχος</p>
+          <h3 data-en="Everything checked, in one visit">Όλα ελεγμένα, σε μία επίσκεψη</h3>
+          <p data-en="A complete examination covers much more than reading letters on a chart: refraction for glasses, eye pressure, the front of the eye under the slit lamp and the fundus. Adults are advised to have one every one to two years, and more often after forty or with diabetes, high blood pressure or a family history of glaucoma.">Ένας πλήρης έλεγχος είναι πολύ περισσότερα από το να διαβάσετε γράμματα σε έναν πίνακα: διαθλαστικός έλεγχος για γυαλιά, μέτρηση της πίεσης του ματιού, εξέταση του πρόσθιου ημιμορίου με τη σχισμοειδή λυχνία και βυθοσκόπηση. Στους ενήλικες συνιστάται κάθε ένα με δύο χρόνια, και συχνότερα μετά τα σαράντα ή όταν υπάρχει διαβήτης, υπέρταση ή οικογενειακό ιστορικό γλαυκώματος.</p>
+          <p data-en="The same visit also takes care of everyday problems: red or irritated eyes, conjunctivitis, a chalazion that will not go away, and the questions that come with a new pair of glasses.">Στην ίδια επίσκεψη αντιμετωπίζονται και τα καθημερινά προβλήματα: κόκκινα ή ερεθισμένα μάτια, επιπεφυκίτιδα, ένα χαλάζιο που δεν υποχωρεί, και οι απορίες που φέρνει ένα καινούργιο ζευγάρι γυαλιά.</p>
+          <ul class="chips"><li data-en="Refraction">Διαθλαστικός έλεγχος</li><li data-en="Tonometry">Τονομέτρηση</li><li data-en="Keratometry">Κερατομετρία</li><li data-en="Keratoconus">Κερατόκωνος</li><li data-en="Conjunctivitis">Επιπεφυκίτιδα</li><li data-en="Chalazion removal">Αφαίρεση χαλαζίου</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIGNATURE: VISION SIMULATOR -->
+<section class="sec sim" id="prosomoiotis" aria-labelledby="sim-h">
+  <div class="wrap">
+    <div class="sim-head">
+      <p class="eyebrow rv" data-en="Vision simulator">Προσομοιωτής όρασης</p>
+      <h2 id="sim-h" class="rv d1" data-en="How does an eye see with…">Πώς βλέπει ένα μάτι με…</h2>
+      <p class="lead rv d2" data-en="Choose a condition and move the slider. The view of Mount Penteli from the square changes the way it would for someone living with it.">Διαλέξτε μια πάθηση και μετακινήστε τη μπάρα. Η θέα προς την Πεντέλη από την πλατεία αλλάζει όπως θα την έβλεπε κάποιος που ζει με αυτήν.</p>
+    </div>
+    <div class="sim-grid">
+      <div class="sim-left">
+        <div class="conds" role="group" aria-label="Πάθηση" data-en-aria="Condition">
+          <button type="button" class="cond" data-c="normal" aria-pressed="false" data-en="Healthy vision">Φυσιολογική όραση</button>
+          <button type="button" class="cond" data-c="myopia" aria-pressed="false" data-en="Myopia">Μυωπία</button>
+          <button type="button" class="cond" data-c="astig" aria-pressed="false" data-en="Astigmatism">Αστιγματισμός</button>
+          <button type="button" class="cond" data-c="cataract" aria-pressed="true" data-en="Cataract">Καταρράκτης</button>
+          <button type="button" class="cond" data-c="glaucoma" aria-pressed="false" data-en="Glaucoma">Γλαύκωμα</button>
+          <button type="button" class="cond" data-c="amd" aria-pressed="false" data-en="Macular degeneration">Εκφύλιση ωχράς κηλίδας</button>
+          <button type="button" class="cond" data-c="diabetic" aria-pressed="false" data-en="Diabetic retinopathy">Διαβητική αμφιβληστροειδοπάθεια</button>
+        </div>
+        <div class="sev">
+          <label for="sev"><span data-en="Severity">Βαθμός</span><output id="sevOut" for="sev">60%</output></label>
+          <input type="range" id="sev" min="0" max="100" value="60" step="1">
+        </div>
+      </div>
+      <div class="sim-right">
+        <div class="stage" id="stage">
+          <span class="stage-tag" id="stageTag" data-en="Cataract">Καταρράκτης</span>
+          <svg class="scene" id="scene" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Ενδεικτική θέα από την πλατεία της Νέας Πεντέλης προς το βουνό, με έναν πίνακα γραμμάτων οπτικής οξύτητας" data-en-aria="Illustrative view from the square of Nea Penteli towards the mountain, with a visual-acuity letter chart">
+            <defs>
+              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6F9FC4"/><stop offset=".6" stop-color="#BFD6E4"/><stop offset="1" stop-color="#F1E3C8"/></linearGradient>
+              <linearGradient id="mtn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7C8F86"/><stop offset="1" stop-color="#A4B0A2"/></linearGradient>
+              <linearGradient id="gnd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D8CBB2"/><stop offset="1" stop-color="#B9A98C"/></linearGradient>
+            </defs>
+            <rect width="800" height="500" fill="url(#sky)"/>
+            <circle cx="640" cy="92" r="30" fill="#FFF3D6"/>
+            <path d="M0 300 L70 262 L150 240 L210 214 L262 196 L300 180 L336 170 L372 176 L410 160 L452 150 L498 170 L540 188 L600 204 L660 228 L730 250 L800 270 V360 H0Z" fill="url(#mtn)"/>
+            <path d="M300 180 L312 176 L322 190 L334 172 L352 184" fill="none" stroke="#EEF2EE" stroke-width="2" opacity=".6"/>
+            <g fill="#F4EFE6"><rect x="40" y="300" width="90" height="70"/><rect x="600" y="296" width="120" height="74"/><rect x="150" y="318" width="60" height="52"/></g>
+            <g fill="#C7704F"><path d="M34 300 L85 276 L136 300Z"/><path d="M594 296 L660 270 L726 296Z"/></g>
+            <g fill="#5B6B79"><rect x="58" y="320" width="14" height="20"/><rect x="96" y="320" width="14" height="20"/><rect x="620" y="316" width="14" height="22"/><rect x="652" y="316" width="14" height="22"/><rect x="684" y="316" width="14" height="22"/><rect x="170" y="334" width="12" height="16"/></g>
+            <rect y="360" width="800" height="140" fill="url(#gnd)"/>
+            <path d="M0 440 H800" stroke="#A89878" stroke-width="2" stroke-dasharray="26 18"/>
+            <g><rect x="742" y="240" width="10" height="140" fill="#6B5A48"/><circle cx="747" cy="226" r="44" fill="#5E7F55"/><circle cx="722" cy="250" r="30" fill="#6E9163"/><circle cx="772" cy="252" r="28" fill="#557549"/></g>
+            <g transform="translate(300 214)">
+              <rect x="-6" y="176" width="12" height="80" fill="#3B3F46"/>
+              <rect width="200" height="186" x="-100" y="0" rx="6" fill="#FBFAF6" stroke="#2B2F36" stroke-width="3"/>
+              <g font-family="Inter,Arial,sans-serif" font-weight="500" fill="#16181C" text-anchor="middle">
+                <text y="56" font-size="52" data-en="E">Ε</text>
+                <text y="98" font-size="30" letter-spacing="10" data-en="F P">Π Τ</text>
+                <text y="130" font-size="20" letter-spacing="8" data-en="T O Z">Ο Ζ Λ</text>
+                <text y="154" font-size="13" letter-spacing="6" data-en="L P E D">Δ Η Κ Ν</text>
+                <text y="172" font-size="8" letter-spacing="4" data-en="P E C F D">Σ Φ Ω Β Γ</text>
+              </g>
+            </g>
+            <g transform="translate(560 318)"><rect x="-4" y="0" width="8" height="70" fill="#3B3F46"/><rect x="-58" y="-26" width="116" height="30" rx="4" fill="#1F5C8C"/><text x="0" y="-5" font-family="Inter,Arial,sans-serif" font-size="14" font-weight="500" fill="#fff" text-anchor="middle" data-en="SQUARE">ΠΛΑΤΕΙΑ</text></g>
+          </svg>
+          <div class="ov ov-haze" id="ovHaze"></div>
+          <div class="ov ov-tunnel" id="ovTunnel"></div>
+          <div class="ov ov-amd" id="ovAmd"></div>
+          <div class="ov ov-spots" id="ovSpots"></div>
+        </div>
+        <div class="sim-text" aria-live="polite">
+          <div><h3 id="simTitle" data-en="Cataract">Καταρράκτης</h3><p id="simDesc">Όλα μοιάζουν θαμπά και κιτρινωπά, σαν πίσω από θολό τζάμι· τα φώτα θαμπώνουν.</p></div>
+          <div class="sim-when"><span data-en="When to book">Πότε να κλείσετε ραντεβού</span><p id="simWhen">Όταν η όραση δεν βελτιώνεται με τα γυαλιά ή η οδήγηση τη νύχτα γίνεται δύσκολη.</p></div>
+        </div>
+        <p class="disc" data-en="Illustrative simulation — it does not replace an eye examination.">Ενδεικτική απεικόνιση — δεν αντικαθιστά την οφθαλμολογική εξέταση.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="sec about" id="i-giatros" aria-labelledby="ab-h">
+  <div class="wrap">
+    <div class="portrait">
+      <figure>
+        <img src="assets/img/stavroula-davou-ofthalmiatros-900.webp" srcset="assets/img/stavroula-davou-ofthalmiatros-560.webp 560w, assets/img/stavroula-davou-ofthalmiatros-900.webp 900w" sizes="(max-width: 980px) 320px, 36vw" width="900" height="1392" loading="lazy" decoding="async" alt="Η οφθαλμίατρος Σταυρούλα Δάβου στο γραφείο του ιατρείου της στη Νέα Πεντέλη" data-en-alt="Ophthalmologist Stavroula Davou at the desk of her practice in Nea Penteli">
+      </figure>
+      <p class="portrait-cap" style="margin-top:16px;font-size:13px;color:var(--mute)" data-en="Stavroula Davou, MD, FEBO · Ophthalmic surgeon">Σταυρούλα Δάβου, FEBO · Χειρουργός Οφθαλμίατρος</p>
+    </div>
+    <div>
+      <p class="eyebrow rv" data-en="The doctor">Η γιατρός</p>
+      <h2 id="ab-h" class="rv d1" data-en="Stavroula Davou, ophthalmic surgeon">Σταυρούλα Δάβου, χειρουργός οφθαλμίατρος</h2>
+      <p class="lead rv" data-en="An ophthalmologist who takes the time to listen, examine thoroughly and explain — in plain words — what your eyes need.">Μια οφθαλμίατρος που αφιερώνει χρόνο για να ακούσει, να εξετάσει σχολαστικά και να εξηγήσει — με απλά λόγια — τι χρειάζονται τα μάτια σας.</p>
+      <p class="rv" data-en="Stavroula Davou studied at the Medical School of the National and Kapodistrian University of Athens and trained in Ophthalmology at the 1st University Eye Clinic of the «G. Gennimatas» General Hospital of Athens. She holds the European title of the European Board of Ophthalmology (FEBO).">Η Σταυρούλα Δάβου αποφοίτησε από την Ιατρική Σχολή του Εθνικού και Καποδιστριακού Πανεπιστημίου Αθηνών και ειδικεύτηκε στην Οφθαλμολογία στην Α΄ Πανεπιστημιακή Οφθαλμολογική Κλινική του ΓΝΑ «Γ. Γεννηματάς». Κατέχει τον Ευρωπαϊκό Τίτλο Οφθαλμολογίας (Fellow of the European Board of Ophthalmology — FEBO).</p>
+      <p class="rv" data-en="Her work focuses on refractive surgery and cataract, diseases of the retina and intravitreal injections, and glaucoma with visual field analysis. In her private practice on the central square of Nea Penteli she sees adults and children with modern diagnostic equipment, by appointment.">Το αντικείμενό της εστιάζει στη διαθλαστική χειρουργική και τον καταρράκτη, στις παθήσεις του βυθού με τις ενδοϋαλοειδικές ενέσεις και στο γλαύκωμα με την ανάλυση των οπτικών πεδίων. Στο ιδιωτικό της ιατρείο, στην κεντρική πλατεία της Νέας Πεντέλης, εξετάζει ενήλικες και παιδιά με σύγχρονο διαγνωστικό εξοπλισμό, κατόπιν ραντεβού.</p>
+      <ul class="cv">
+        <li class="rv"><small data-en="Studies">Σπουδές</small><div><b data-en="Medical School, University of Athens">Ιατρική Σχολή Αθηνών</b><span data-en="National and Kapodistrian University of Athens">Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών</span></div></li>
+        <li class="rv"><small data-en="Specialty">Ειδικότητα</small><div><b data-en="Ophthalmology">Οφθαλμολογία</b><span data-en="1st University Eye Clinic, «G. Gennimatas» General Hospital of Athens">Α΄ Πανεπιστημιακή Οφθαλμολογική Κλινική, ΓΝΑ «Γ. Γεννηματάς»</span></div></li>
+        <li class="rv"><small data-en="European title">Ευρωπαϊκός τίτλος</small><div><b>FEBO</b><span>Fellow of the European Board of Ophthalmology</span></div></li>
+        <li class="rv"><small data-en="Memberships">Μέλος</small><div><b data-en="Hellenic Ophthalmological Society">Ελληνική Οφθαλμολογική Εταιρεία</b><span data-en="Hellenic Vitreoretinal Society · Hellenic Glaucoma Society">Ελληνική Εταιρεία Παθήσεων Υαλοειδούς–Αμφιβληστροειδούς · Ελληνική Εταιρεία Γλαυκώματος</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="sec" id="axiologiseis" aria-labelledby="rv-h" style="padding-top:clamp(40px,5vw,80px)">
+  <div class="wrap">
+    <p class="eyebrow rv" data-en="Reviews">Αξιολογήσεις</p>
+    <h2 id="rv-h" class="rv d1" style="margin:18px 0 56px;max-width:18ch" data-en="In the words of her patients">Με τα λόγια των ασθενών της</h2>
+    <div class="rv-wrap">
+      <div class="score rv">
+        <div class="big">5,0</div>
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p data-en="Average rating from dozens of reviews on Google.">Μέση βαθμολογία από δεκάδες αξιολογήσεις στο Google.</p>
+        <a class="tlink" href="https://www.google.com/maps?cid=1594672985007394412" target="_blank" rel="noopener"><em style="font-style:normal" data-en="Read all reviews on Google">Διαβάστε όλες τις αξιολογήσεις στο Google</em> <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="rv d1">
+        <div class="quote" id="quote" aria-live="polite">
+          <figure class="q on"><blockquote>Είναι εξαιρετικά ευγενική, προσεκτική και επεξηγηματική, αφιερώνει χρόνο για να εξηγήσει με σαφήνεια και να απαντήσει σε όλες τις απορίες. Σίγουρα θα την ξαναπροτιμήσω!</blockquote><footer><span class="av" aria-hidden="true">Κ</span><span><b>Κωνσταντίνος Ανδρεανός</b> · Google</span></footer></figure>
+          <figure class="q"><blockquote>Finally a doctor that listens and makes you feel welcome. Extremely professional and knowledgeable yet polite and attentive.</blockquote><footer><span class="av" aria-hidden="true">N</span><span><b>Nikolas Drakopoulos</b> · Google</span></footer></figure>
+          <figure class="q"><blockquote>Η γιατρός με βοήθησε να βρω λύση σε ένα πρόβλημα που με ταλαιπωρούσε για πολλά χρόνια και την ευχαριστώ πολύ για αυτό. Ιδιαίτερα καταρτισμένη και υπομονετική στο να σε ακούσει και να σε βοηθήσει.</blockquote><footer><span class="av" aria-hidden="true">K</span><span><b>Konstantinos Laimos</b> · Google</span></footer></figure>
+          <figure class="q"><blockquote>Άψογη επαγγελματίας, καταρτισμένη και πολύ ευγενική, με προσοχή στη λεπτομέρεια και ανθρώπινη προσέγγιση.</blockquote><footer><span class="av" aria-hidden="true">D</span><span><b>Despina Paspaliari</b> · Google</span></footer></figure>
+          <figure class="q"><blockquote>Η οφθαλμίατρος είναι εξαιρετική στη δουλειά της, με υψηλή κατάρτιση και ευγενέστατη! Ο εξοπλισμός υπερσύγχρονος ενώ ο χώρος είναι πολύ όμορφος και απόλυτα προσεγμένος.</blockquote><footer><span class="av" aria-hidden="true">D</span><span><b>Dimitris Kyriazanos</b> · Google</span></footer></figure>
+          <figure class="q"><blockquote>Η γιατρός με δέχθηκε τελευταία στιγμή και μου έκανε ολοκληρωμένη εξέταση, άψογη στη συμπεριφορά της, την προτείνω ανεπιφύλακτα!</blockquote><footer><span class="av" aria-hidden="true">V</span><span><b>Vanessa Theodorou</b> · Google</span></footer></figure>
+          <figure class="q"><blockquote>Εξαιρετική γιατρός και επαγγελματίας! Ιδιαίτερα αγαπητή και στα παιδάκια.</blockquote><footer><span class="av" aria-hidden="true">O</span><span><b>Olga Pekt</b> · Google</span></footer></figure>
+          <figure class="q"><blockquote>Φανταστική γιατρός! Ευγενικότατη με γνώση πάνω στο αντικείμενο, έχω μείνει ικανοποιημένος, τη συστήνω σε όλους.</blockquote><footer><span class="av" aria-hidden="true">Z</span><span><b>Zedd Gaming</b> · Google</span></footer></figure>
+          <figure class="q"><blockquote>Εξαιρετική επιστήμονας και υπέροχος άνθρωπος. Άρτια ενημερωμένη, τη συνιστώ ανεπιφύλακτα!</blockquote><footer><span class="av" aria-hidden="true">Μ</span><span><b>Μαρία Γκολέμη</b> · Google</span></footer></figure>
+          <figure class="q"><blockquote>Πολύ εξυπηρετική και πολύ καλή στη δουλειά της! Έμεινα εξαιρετικά ικανοποιημένος από την επίσκεψή μου, τη συνιστώ!</blockquote><footer><span class="av" aria-hidden="true">Α</span><span><b>Ανδρέας Δήμου</b> · Google</span></footer></figure>
+          <figure class="q"><blockquote>Φανταστική γιατρός και εξαιρετική επαγγελματίας!</blockquote><footer><span class="av" aria-hidden="true">A</span><span><b>Aphrodite P.</b> · Google</span></footer></figure>
+        </div>
+        <div class="q-nav">
+          <button type="button" class="arr" id="qPrev" aria-label="Προηγούμενη αξιολόγηση" data-en-aria="Previous review"><svg aria-hidden="true"><use href="#i-left"/></svg></button>
+          <span class="q-count" id="qCount">01 / 11</span>
+          <button type="button" class="arr" id="qNext" aria-label="Επόμενη αξιολόγηση" data-en-aria="Next review"><svg aria-hidden="true"><use href="#i-arr"/></svg></button>
+          <span class="q-bar" aria-hidden="true"><i id="qBar"></i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="erotiseis" aria-labelledby="fq-h" style="padding-top:clamp(40px,5vw,80px)">
+  <div class="wrap">
+    <p class="eyebrow rv" data-en="Questions">Συχνές ερωτήσεις</p>
+    <h2 id="fq-h" class="rv d1" style="margin-top:18px" data-en="What patients ask before their visit">Τι ρωτούν οι ασθενείς πριν από την επίσκεψη</h2>
+    <div class="faq-grid">
+      <div class="faq-col">
+        <details><summary data-en="How often should I have my eyes checked?">Κάθε πότε πρέπει να κάνω οφθαλμολογικό έλεγχο;</summary><p data-en="Healthy adults every one to two years; after forty, or with diabetes, high blood pressure or a family history of glaucoma, once a year. Children should have a first check before starting school, even if they seem to see well.">Οι υγιείς ενήλικες κάθε ένα με δύο χρόνια· μετά τα σαράντα, ή όταν υπάρχει διαβήτης, υπέρταση ή οικογενειακό ιστορικό γλαυκώματος, μία φορά τον χρόνο. Τα παιδιά χρειάζονται έναν πρώτο έλεγχο πριν πάνε σχολείο, ακόμη κι αν φαίνεται ότι βλέπουν καλά.</p></details>
+        <details><summary data-en="Will I get dilating drops, and can I drive afterwards?">Θα μου βάλετε σταγόνες μυδρίασης; Μπορώ να οδηγήσω μετά;</summary><p data-en="Dilating drops are often needed to examine the retina properly. They blur near vision and make light uncomfortable for a few hours, so it is better not to drive straight after — bring sunglasses or someone to drive you home.">Οι σταγόνες μυδρίασης χρειάζονται συχνά για να εξεταστεί σωστά ο αμφιβληστροειδής. Θολώνουν την κοντινή όραση και ενοχλεί το φως για λίγες ώρες, οπότε καλύτερα να μην οδηγήσετε αμέσως μετά — φέρτε γυαλιά ηλίου ή κάποιον να σας συνοδεύσει.</p></details>
+        <details><summary data-en="How do I know if I have cataract?">Πώς καταλαβαίνω ότι έχω καταρράκτη;</summary><p data-en="Cloudy or yellowish vision, faded colours, glare from lights at night and frequent changes of glasses are the usual signs. Only an examination with the slit lamp confirms it and shows whether surgery is needed now or later.">Θολή ή κιτρινωπή όραση, ξεθωριασμένα χρώματα, θάμβος από τα φώτα τη νύχτα και συχνές αλλαγές γυαλιών είναι τα συνήθη σημάδια. Μόνο η εξέταση με τη σχισμοειδή λυχνία το επιβεβαιώνει και δείχνει αν το χειρουργείο χρειάζεται τώρα ή αργότερα.</p></details>
+        <details><summary data-en="Am I a candidate for laser vision correction?">Είμαι κατάλληλος για laser μυωπίας;</summary><p data-en="Usually yes if you are over eighteen, your prescription has been stable for at least a year and your cornea is healthy and thick enough. Pachymetry and topography at the practice give the answer before any decision is made.">Συνήθως ναι, αν είστε άνω των δεκαοκτώ, ο βαθμός σας είναι σταθερός τουλάχιστον έναν χρόνο και ο κερατοειδής είναι υγιής και επαρκούς πάχους. Η παχυμετρία και η τοπογραφία στο ιατρείο δίνουν την απάντηση πριν από κάθε απόφαση.</p></details>
+      </div>
+      <div class="faq-col">
+        <details><summary data-en="Glaucoma has no symptoms — how is it found?">Το γλαύκωμα δεν έχει συμπτώματα — πώς εντοπίζεται;</summary><p data-en="Through a routine check: eye pressure measurement, examination of the optic nerve and, when needed, visual field analysis and OCT. That is why regular checks matter most after forty and when a parent or sibling has glaucoma.">Με τον τακτικό έλεγχο: μέτρηση της ενδοφθάλμιας πίεσης, εξέταση του οπτικού νεύρου και, όταν χρειάζεται, ανάλυση οπτικών πεδίων και OCT. Γι’ αυτό ο τακτικός έλεγχος μετράει κυρίως μετά τα σαράντα και όταν κάποιος γονιός ή αδερφός έχει γλαύκωμα.</p></details>
+        <details><summary data-en="At what age should a child first see an ophthalmologist?">Σε ποια ηλικία πρέπει ένα παιδί να δει πρώτη φορά οφθαλμίατρο;</summary><p data-en="A first examination around the age of three to four is recommended, and earlier if you notice a squint, a head tilt or that the child comes very close to screens and books. Amblyopia responds best when it is treated early.">Συνιστάται μια πρώτη εξέταση γύρω στα τρία με τέσσερα χρόνια, και νωρίτερα αν παρατηρήσετε στραβισμό, γέρσιμο του κεφαλιού ή ότι το παιδί πλησιάζει πολύ τις οθόνες και τα βιβλία. Η αμβλυωπία ανταποκρίνεται καλύτερα όταν αντιμετωπίζεται νωρίς.</p></details>
+        <details><summary data-en="I have diabetes — why do I need an eye exam?">Έχω διαβήτη — γιατί χρειάζομαι οφθαλμολογικό έλεγχο;</summary><p data-en="Diabetes can damage the small vessels of the retina long before vision changes. A yearly fundus examination finds diabetic retinopathy early, when laser or injections can protect your sight.">Ο διαβήτης μπορεί να βλάψει τα μικρά αγγεία του αμφιβληστροειδούς πολύ πριν αλλάξει η όραση. Μια ετήσια βυθοσκόπηση εντοπίζει νωρίς τη διαβητική αμφιβληστροειδοπάθεια, όταν το laser ή οι ενέσεις μπορούν να προστατέψουν την όρασή σας.</p></details>
+        <details><summary data-en="How do I book an appointment?">Πώς κλείνω ραντεβού;</summary><p data-en="Call 210 810 0153 or send an email to st.davou@gmail.com. The practice is at 7 Iroon Polytechniou Street, on the central square of Nea Penteli, and works Monday to Friday, 09:00–21:00, by appointment.">Καλέστε στο 210 810 0153 ή στείλτε email στο st.davou@gmail.com. Το ιατρείο βρίσκεται στην οδό Ηρώων Πολυτεχνείου 7, στην κεντρική πλατεία της Νέας Πεντέλης, και λειτουργεί Δευτέρα έως Παρασκευή, 09:00–21:00, κατόπιν ραντεβού.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec contact" id="epikoinonia" aria-labelledby="ct-h">
+  <div class="wrap ct">
+    <div class="map" id="map">
+      <svg class="m" viewBox="0 0 600 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <rect width="600" height="460" fill="#171B21"/>
+        <g stroke="#262C35" stroke-width="10" fill="none" stroke-linecap="round"><path d="M-20 120 C 120 140 240 170 330 210 S 520 300 640 330"/><path d="M160 -20 C 190 90 230 170 280 240 S 330 380 350 480"/><path d="M-20 330 C 90 300 190 280 280 240"/><path d="M420 -20 C 400 90 360 170 330 210"/></g>
+        <g stroke="#20252D" stroke-width="5" fill="none"><path d="M40 -10 L 120 470"/><path d="M500 -10 L 470 470"/><path d="M-10 60 L 610 40"/><path d="M-10 410 L 610 390"/><path d="M230 -10 L 180 470"/><path d="M380 -10 L 420 470"/></g>
+        <ellipse cx="300" cy="228" rx="58" ry="40" fill="#1E2A24" stroke="#2A3A31" stroke-width="2"/>
+        <text x="300" y="296" fill="#6D7680" font-family="Inter,Arial" font-size="12" text-anchor="middle" letter-spacing="2" data-en="IROON POLYTECHNIOU SQ.">ΠΛ. ΗΡΩΩΝ ΠΟΛΥΤΕΧΝΕΙΟΥ</text>
+      </svg>
+      <div class="pin"><span data-en="Iroon Polytechniou 7">Ηρ. Πολυτεχνείου 7</span><i></i></div>
+      <button type="button" class="btn map-btn" id="mapBtn"><svg aria-hidden="true"><use href="#i-pin"/></svg><span data-en="Show interactive map">Εμφάνιση χάρτη</span></button>
+    </div>
+    <div class="ct-info">
+      <p class="eyebrow rv" data-en="Contact">Επικοινωνία</p>
+      <h2 id="ct-h" class="rv d1" data-en="Eye practice on the square of Nea Penteli">Οφθαλμολογικό ιατρείο στην πλατεία της Νέας Πεντέλης</h2>
+      <ul class="rows">
+        <li class="rv"><small data-en="Address">Διεύθυνση</small><address data-en="Iroon Polytechniou 7, Nea Penteli 152 39">Ηρ. Πολυτεχνείου 7, Νέα Πεντέλη 152 39</address></li>
+        <li class="rv"><small data-en="Phone">Τηλέφωνο</small><a href="tel:+302108100153">210 810 0153</a></li>
+        <li class="rv"><small>Email</small><a href="mailto:st.davou@gmail.com">st.davou@gmail.com</a></li>
+        <li class="rv"><small data-en="Hours">Ωράριο</small><span data-en="Monday–Friday · 09:00–21:00 · by appointment">Δευτέρα–Παρασκευή · 09:00–21:00 · κατόπιν ραντεβού</span></li>
+      </ul>
+      <p class="dir rv" data-en="The practice is at 7 Iroon Polytechniou Street, right on the central square of Nea Penteli (Plateia Iroon Polytechniou) — a few minutes from Melissia, Vrilissia and Penteli.">Το ιατρείο βρίσκεται στην οδό Ηρώων Πολυτεχνείου 7, ακριβώς στην κεντρική πλατεία της Νέας Πεντέλης (Πλατεία Ηρώων Πολυτεχνείου) — λίγα λεπτά από τα Μελίσσια, τα Βριλήσσια και την Πεντέλη.</p>
+      <div class="ct-cta rv">
+        <a class="btn" href="tel:+302108100153"><svg aria-hidden="true"><use href="#i-phone"/></svg><span data-en="Call to book">Κλήση για ραντεβού</span></a>
+        <a class="tlink" href="https://www.google.com/maps/dir/?api=1&amp;destination=38.0573844,23.8574357" target="_blank" rel="noopener"><em style="font-style:normal" data-en="Get directions">Οδηγίες διαδρομής</em> <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ftr">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="#top" aria-label="Σταυρούλα Δάβου — αρχή της σελίδας" data-en-aria="Stavroula Davou — back to top">
+        <svg aria-hidden="true"><use href="#mark"/></svg>
+        <span><b data-en="Stavroula Davou">Σταυρούλα Δάβου</b><small data-en="Ophthalmic surgeon · FEBO">Χειρουργός Οφθαλμίατρος · FEBO</small></span>
+      </a>
+      <p data-en="Cataract, laser vision correction, glaucoma, retina and paediatric ophthalmology in Nea Penteli.">Καταρράκτης, laser διαθλαστικών ανωμαλιών, γλαύκωμα, αμφιβληστροειδής και παιδοοφθαλμολογία στη Νέα Πεντέλη.</p>
+    </div>
+    <div>
+      <h4 data-en="Practice">Ιατρείο</h4>
+      <ul>
+        <li><address data-en="Iroon Polytechniou 7, Nea Penteli 152 39">Ηρ. Πολυτεχνείου 7, Νέα Πεντέλη 152 39</address></li>
+        <li><a href="tel:+302108100153">210 810 0153</a></li>
+        <li><a href="mailto:st.davou@gmail.com">st.davou@gmail.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 data-en="Hours">Ωράριο</h4>
+      <ul><li data-en="Monday–Friday">Δευτέρα–Παρασκευή</li><li>09:00–21:00</li><li data-en="By appointment">Κατόπιν ραντεβού</li></ul>
+    </div>
+    <div class="legal">
+      <span data-en="© 2026 Stavroula Davou. All rights reserved.">© 2026 Σταυρούλα Δάβου. Με την επιφύλαξη παντός δικαιώματος.</span>
+      <span>Designed by <a href="https://advonmedia.com" target="_blank" rel="noopener">Advon Media</a></span>
+    </div>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Γρήγορες ενέργειες" data-en-aria="Quick actions">
+  <a href="tel:+302108100153"><svg aria-hidden="true"><use href="#i-phone"/></svg><span data-en="Call">Κλήση</span></a>
+  <a class="p" href="#epikoinonia"><svg aria-hidden="true"><use href="#i-cal"/></svg><span data-en="Book">Ραντεβού</span></a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=38.0573844,23.8574357" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg><span data-en="Directions">Οδηγίες</span></a>
+</nav>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Physician","@id":"#practice","name":"Δάβου Σταυρούλα - Οφθαλμίατρος - Νέα Πεντέλη","alternateName":["Σταυρούλα Δάβου","Stavroula Davou"],"description":"Χειρουργός Οφθαλμίατρος στη Νέα Πεντέλη: καταρράκτης, laser διαθλαστικών ανωμαλιών, γλαύκωμα, παθήσεις αμφιβληστροειδούς και ωχράς κηλίδας, παιδοοφθαλμολογία.","image":"https://agelmet.github.io/DAVOU/assets/img/ofthalmologiko-iatreio-nea-penteli-1100.webp","logo":"https://agelmet.github.io/DAVOU/assets/logo-mark.svg","telephone":"+30 210 810 0153","email":"st.davou@gmail.com","priceRange":"€€","address":{"@type":"PostalAddress","streetAddress":"Ηρ. Πολυτεχνείου 7","addressLocality":"Νέα Πεντέλη","postalCode":"152 39","addressRegion":"Αττική","addressCountry":"GR"},"geo":{"@type":"GeoCoordinates","latitude":38.0573844,"longitude":23.8574357},"hasMap":"https://www.google.com/maps?cid=1594672985007394412","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"21:00"}],"areaServed":["Νέα Πεντέλη","Πεντέλη","Μελίσσια","Βριλήσσια","Χαλάνδρι"],"availableService":[{"@type":"MedicalProcedure","name":"Χειρουργική καταρράκτη"},{"@type":"MedicalProcedure","name":"Laser διαθλαστικών ανωμαλιών"},{"@type":"MedicalTest","name":"Ανάλυση οπτικών πεδίων"},{"@type":"MedicalTest","name":"OCT"},{"@type":"MedicalProcedure","name":"Ενδοϋαλοειδικές ενέσεις"}],"employee":{"@id":"#person"},"sameAs":["https://www.instadoctor.gr/doctor/65cd0125310a4/davou-stavroula","https://doctor.vrisko.gr/profile/daboy-stayroyla-11225684"]},
+{"@type":"Person","@id":"#person","name":"Σταυρούλα Δάβου","alternateName":"Stavroula Davou","jobTitle":"Χειρουργός Οφθαλμίατρος","image":"https://agelmet.github.io/DAVOU/assets/img/stavroula-davou-ofthalmiatros-900.webp","worksFor":{"@id":"#practice"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών — Ιατρική Σχολή"}],"hasCredential":[{"@type":"EducationalOccupationalCredential","name":"Fellow of the European Board of Ophthalmology (FEBO)"}],"memberOf":[{"@type":"Organization","name":"Ελληνική Οφθαλμολογική Εταιρεία"},{"@type":"Organization","name":"Ελληνική Εταιρεία Παθήσεων Υαλοειδούς–Αμφιβληστροειδούς"},{"@type":"Organization","name":"Ελληνική Εταιρεία Γλαυκώματος"}],"knowsLanguage":["el","en"]},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Κάθε πότε πρέπει να κάνω οφθαλμολογικό έλεγχο;","acceptedAnswer":{"@type":"Answer","text":"Οι υγιείς ενήλικες κάθε ένα με δύο χρόνια· μετά τα σαράντα, ή όταν υπάρχει διαβήτης, υπέρταση ή οικογενειακό ιστορικό γλαυκώματος, μία φορά τον χρόνο. Τα παιδιά χρειάζονται έναν πρώτο έλεγχο πριν πάνε σχολείο, ακόμη κι αν φαίνεται ότι βλέπουν καλά."}},
+{"@type":"Question","name":"Θα μου βάλετε σταγόνες μυδρίασης; Μπορώ να οδηγήσω μετά;","acceptedAnswer":{"@type":"Answer","text":"Οι σταγόνες μυδρίασης χρειάζονται συχνά για να εξεταστεί σωστά ο αμφιβληστροειδής. Θολώνουν την κοντινή όραση και ενοχλεί το φως για λίγες ώρες, οπότε καλύτερα να μην οδηγήσετε αμέσως μετά — φέρτε γυαλιά ηλίου ή κάποιον να σας συνοδεύσει."}},
+{"@type":"Question","name":"Πώς καταλαβαίνω ότι έχω καταρράκτη;","acceptedAnswer":{"@type":"Answer","text":"Θολή ή κιτρινωπή όραση, ξεθωριασμένα χρώματα, θάμβος από τα φώτα τη νύχτα και συχνές αλλαγές γυαλιών είναι τα συνήθη σημάδια. Μόνο η εξέταση με τη σχισμοειδή λυχνία το επιβεβαιώνει και δείχνει αν το χειρουργείο χρειάζεται τώρα ή αργότερα."}},
+{"@type":"Question","name":"Είμαι κατάλληλος για laser μυωπίας;","acceptedAnswer":{"@type":"Answer","text":"Συνήθως ναι, αν είστε άνω των δεκαοκτώ, ο βαθμός σας είναι σταθερός τουλάχιστον έναν χρόνο και ο κερατοειδής είναι υγιής και επαρκούς πάχους. Η παχυμετρία και η τοπογραφία στο ιατρείο δίνουν την απάντηση πριν από κάθε απόφαση."}},
+{"@type":"Question","name":"Το γλαύκωμα δεν έχει συμπτώματα — πώς εντοπίζεται;","acceptedAnswer":{"@type":"Answer","text":"Με τον τακτικό έλεγχο: μέτρηση της ενδοφθάλμιας πίεσης, εξέταση του οπτικού νεύρου και, όταν χρειάζεται, ανάλυση οπτικών πεδίων και OCT. Γι’ αυτό ο τακτικός έλεγχος μετράει κυρίως μετά τα σαράντα και όταν κάποιος γονιός ή αδερφός έχει γλαύκωμα."}},
+{"@type":"Question","name":"Σε ποια ηλικία πρέπει ένα παιδί να δει πρώτη φορά οφθαλμίατρο;","acceptedAnswer":{"@type":"Answer","text":"Συνιστάται μια πρώτη εξέταση γύρω στα τρία με τέσσερα χρόνια, και νωρίτερα αν παρατηρήσετε στραβισμό, γέρσιμο του κεφαλιού ή ότι το παιδί πλησιάζει πολύ τις οθόνες και τα βιβλία. Η αμβλυωπία ανταποκρίνεται καλύτερα όταν αντιμετωπίζεται νωρίς."}},
+{"@type":"Question","name":"Έχω διαβήτη — γιατί χρειάζομαι οφθαλμολογικό έλεγχο;","acceptedAnswer":{"@type":"Answer","text":"Ο διαβήτης μπορεί να βλάψει τα μικρά αγγεία του αμφιβληστροειδούς πολύ πριν αλλάξει η όραση. Μια ετήσια βυθοσκόπηση εντοπίζει νωρίς τη διαβητική αμφιβληστροειδοπάθεια, όταν το laser ή οι ενέσεις μπορούν να προστατέψουν την όρασή σας."}},
+{"@type":"Question","name":"Πώς κλείνω ραντεβού;","acceptedAnswer":{"@type":"Answer","text":"Καλέστε στο 210 810 0153 ή στείλτε email στο st.davou@gmail.com. Το ιατρείο βρίσκεται στην οδό Ηρώων Πολυτεχνείου 7, στην κεντρική πλατεία της Νέας Πεντέλης, και λειτουργεί Δευτέρα έως Παρασκευή, 09:00–21:00, κατόπιν ραντεβού."}}
+]}
+]}
+</script>
+
+<script>
+(function(){
+  var d=document, root=d.documentElement;
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* hero iris: mark done so it never covers the photo (background tabs, reduced motion) */
+  var iris=d.querySelector('.iris');
+  function irisDone(){ root.classList.add('iris-done'); }
+  if(iris){ iris.addEventListener('animationend',irisDone); if(reduce||d.hidden) irisDone(); setTimeout(irisDone,2600); }
+
+  /* header */
+  var hdr=d.getElementById('hdr');
+  function onScroll(){ hdr.classList.toggle('solid', scrollY>40); }
+  addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  /* burger */
+  var burger=d.getElementById('burger');
+  function menu(open){ d.body.classList.toggle('menu',open); burger.setAttribute('aria-expanded',open); burger.setAttribute('aria-label', open ? (lang==='en'?'Close menu':'Κλείσιμο μενού') : (lang==='en'?'Menu':'Μενού')); burger.classList.toggle('is-close',open); }
+  burger.addEventListener('click',function(){ menu(!d.body.classList.contains('menu')); });
+  d.querySelectorAll('#mnav a').forEach(function(a){ a.addEventListener('click',function(){ menu(false); }); });
+  d.addEventListener('keydown',function(e){ if(e.key==='Escape') menu(false); });
+
+  /* reveals */
+  var rv=d.querySelectorAll('.rv');
+  if('IntersectionObserver' in window && !reduce){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); },{rootMargin:'0px 0px -8% 0px',threshold:.04});
+    rv.forEach(function(el){ io.observe(el); });
+    setTimeout(function(){ rv.forEach(function(el){ if(el.getBoundingClientRect().top<innerHeight) el.classList.add('in'); }); },1200);
+  } else rv.forEach(function(el){ el.classList.add('in'); });
+
+  /* active nav */
+  var links=[].slice.call(d.querySelectorAll('.nav a'));
+  if('IntersectionObserver' in window){
+    var so=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ links.forEach(function(a){ a.classList.toggle('on', a.getAttribute('href')==='#'+e.target.id); }); } }); },{rootMargin:'-45% 0px -50% 0px'});
+    links.forEach(function(a){ var s=d.querySelector(a.getAttribute('href')); if(s) so.observe(s); });
+  }
+
+  /* tabs */
+  var tabs=[].slice.call(d.querySelectorAll('.tab'));
+  function selectTab(t,focus){
+    tabs.forEach(function(x){ var on=x===t; x.setAttribute('aria-selected',on); x.tabIndex=on?0:-1; var p=d.getElementById(x.getAttribute('aria-controls')); p.hidden=!on; if(on){ p.classList.remove('enter'); void p.offsetWidth; p.classList.add('enter'); } });
+    if(focus) t.focus();
+    if(matchMedia('(max-width: 980px)').matches) t.scrollIntoView({block:'nearest',inline:'center',behavior:reduce?'auto':'smooth'});
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){ selectTab(t); });
+    t.addEventListener('keydown',function(e){ var k=e.key, n=null;
+      if(k==='ArrowDown'||k==='ArrowRight') n=tabs[(i+1)%tabs.length];
+      if(k==='ArrowUp'||k==='ArrowLeft') n=tabs[(i-1+tabs.length)%tabs.length];
+      if(k==='Home') n=tabs[0]; if(k==='End') n=tabs[tabs.length-1];
+      if(n){ e.preventDefault(); selectTab(n,true); } });
+  });
+
+  /* ===== signature: vision simulator ===== */
+  var C={
+    normal:{el:['Φυσιολογική όραση','Καθαρή εικόνα σε κάθε απόσταση: το βουνό, ο πίνακας και τα μικρά γράμματα διακρίνονται χωρίς προσπάθεια.','Ακόμη και χωρίς ενοχλήσεις, ένας πλήρης έλεγχος κάθε ένα με δύο χρόνια προλαμβάνει τα περισσότερα προβλήματα.'],
+            en:['Healthy vision','A clear picture at every distance: the mountain, the chart and the small letters are all easy to make out.','Even without symptoms, a complete check every one to two years catches most problems early.']},
+    myopia:{el:['Μυωπία','Τα κοντινά φαίνονται καθαρά, αλλά ό,τι είναι μακριά — πινακίδες, πρόσωπα, το βουνό — θολώνει.','Όταν κουράζεστε στην οδήγηση ή μισοκλείνετε τα μάτια για να δείτε μακριά· στα παιδιά, όταν πλησιάζουν πολύ τον πίνακα.'],
+            en:['Myopia','Near objects look sharp, but everything far away — signs, faces, the mountain — turns blurry.','When driving becomes tiring or you squint to see far away; in children, when they move closer to the board.']},
+    astig:{el:['Αστιγματισμός','Η εικόνα «απλώνεται» προς μία κατεύθυνση: τα γράμματα διπλασιάζονται και οι γραμμές φαίνονται σκιασμένες.','Όταν τα γράμματα μοιάζουν διπλά, όταν πονάει το κεφάλι μετά το διάβασμα ή οι οθόνες κουράζουν γρήγορα.'],
+           en:['Astigmatism','The image smears in one direction: letters look doubled and lines appear shadowed.','When letters look doubled, when reading gives you a headache or screens tire you quickly.']},
+    cataract:{el:['Καταρράκτης','Όλα μοιάζουν θαμπά και κιτρινωπά, σαν πίσω από θολό τζάμι· τα χρώματα ξεθωριάζουν και τα φώτα θαμπώνουν.','Όταν η όραση δεν βελτιώνεται με τα γυαλιά ή η οδήγηση τη νύχτα γίνεται δύσκολη.'],
+              en:['Cataract','Everything looks dim and yellowish, as if behind frosted glass; colours fade and lights cause glare.','When glasses no longer help or driving at night becomes difficult.']},
+    glaucoma:{el:['Γλαύκωμα','Η περιφερική όραση χάνεται σιγά σιγά και το πεδίο στενεύει σαν τούνελ — συνήθως χωρίς κανένα άλλο σύμπτωμα.','Μετά τα σαράντα κάθε χρόνο, και νωρίτερα αν κάποιος στην οικογένεια έχει γλαύκωμα.'],
+              en:['Glaucoma','Side vision is lost slowly and the field narrows like a tunnel — usually with no other symptom at all.','Every year after forty, and earlier if someone in your family has glaucoma.']},
+    amd:{el:['Εκφύλιση ωχράς κηλίδας','Το κέντρο της εικόνας σκουραίνει και παραμορφώνεται, ενώ τα πλάγια μένουν ορατά — το διάβασμα και τα πρόσωπα δυσκολεύουν.','Αμέσως, αν οι ευθείες γραμμές φαίνονται κυματιστές ή εμφανιστεί σκιά στο κέντρο της όρασης.'],
+         en:['Macular degeneration','The centre of the picture darkens and warps while the sides stay visible — reading and faces become hard.','Straight away if straight lines look wavy or a shadow appears in the centre of your vision.']},
+    diabetic:{el:['Διαβητική αμφιβληστροειδοπάθεια','Σκοτεινές κηλίδες και θόλωμα εμφανίζονται σε διάφορα σημεία του οπτικού πεδίου.','Κάθε χρόνο αν έχετε διαβήτη, ακόμη κι αν βλέπετε καλά — και αμέσως αν εμφανιστούν κηλίδες.'],
+              en:['Diabetic retinopathy','Dark spots and blurring appear across different parts of the field of view.','Every year if you have diabetes, even if you see well — and immediately if spots appear.']}
+  };
+  var cur='cataract', lang='el';
+  var scene=d.getElementById('scene'), sev=d.getElementById('sev'), sevOut=d.getElementById('sevOut'), stage=d.getElementById('stage');
+  var ov={haze:d.getElementById('ovHaze'),tunnel:d.getElementById('ovTunnel'),amd:d.getElementById('ovAmd'),spots:d.getElementById('ovSpots')};
+  var astig=d.getElementById('astigBlur'), amdDisp=d.getElementById('amdDisp');
+  var condBtns=[].slice.call(d.querySelectorAll('.cond'));
+  function applySim(){
+    var s=sev.value/100, f='none';
+    sevOut.textContent=sev.value+'%'; sev.style.setProperty('--p',sev.value+'%');
+    stage.style.setProperty('--s',s);
+    Object.keys(ov).forEach(function(k){ ov[k].style.opacity=0; });
+    if(cur==='myopia') f='blur('+(s*9).toFixed(1)+'px)';
+    if(cur==='astig'){ astig.setAttribute('stdDeviation',(s*14).toFixed(1)+' '+(s*1.2).toFixed(1)); f='url(#f-astig)'; }
+    if(cur==='cataract'){ f='blur('+(s*4.5).toFixed(1)+'px) sepia('+(s*.7).toFixed(2)+') contrast('+(1-s*.35).toFixed(2)+') brightness('+(1+s*.08).toFixed(2)+')'; ov.haze.style.opacity=(s*.85).toFixed(2); }
+    if(cur==='glaucoma'){ ov.tunnel.style.opacity=Math.min(1,s*1.6).toFixed(2); }
+    if(cur==='amd'){ amdDisp.setAttribute('scale',(s*40).toFixed(0)); f='url(#f-amd)'; ov.amd.style.opacity=Math.min(1,s*1.4).toFixed(2); }
+    if(cur==='diabetic'){ f='blur('+(s*2.5).toFixed(1)+'px)'; ov.spots.style.opacity=Math.min(1,s*1.3).toFixed(2); }
+    if(cur==='normal') f='none';
+    scene.style.filter=f;
+    var t=C[cur][lang];
+    d.getElementById('simTitle').textContent=t[0];
+    d.getElementById('stageTag').textContent=t[0];
+    d.getElementById('simDesc').textContent=t[1];
+    d.getElementById('simWhen').textContent=t[2];
+    sev.disabled=cur==='normal';
+  }
+  condBtns.forEach(function(b){ b.addEventListener('click',function(){ cur=b.dataset.c; condBtns.forEach(function(x){ x.setAttribute('aria-pressed',x===b); }); applySim(); }); });
+  sev.addEventListener('input',applySim);
+  applySim();
+  (function(){ var box=d.querySelector('.conds'), on=d.querySelector('.cond[aria-pressed=true]'); if(box&&on&&box.scrollWidth>box.clientWidth) box.scrollLeft=on.offsetLeft-box.offsetLeft-20; })();
+
+  /* reviews rotation */
+  var qs=[].slice.call(d.querySelectorAll('.q')), qi=0, qTimer=null, qBar=d.getElementById('qBar'), qCount=d.getElementById('qCount'), qBox=d.getElementById('quote');
+  var DUR=8000, paused=false;
+  function pad(n){ return (n<10?'0':'')+n; }
+  function showQ(i){
+    qi=(i+qs.length)%qs.length;
+    qs.forEach(function(q,k){ q.classList.toggle('on',k===qi); });
+    qCount.textContent=pad(qi+1)+' / '+pad(qs.length);
+    restart();
+  }
+  function restart(){
+    clearTimeout(qTimer);
+    if(qBar.animate && !reduce){ qBar.getAnimations && qBar.getAnimations().forEach(function(a){a.cancel();}); if(!paused) qBar.animate([{transform:'scaleX(0)'},{transform:'scaleX(1)'}],{duration:DUR,fill:'forwards'}); }
+    if(!reduce && !paused) qTimer=setTimeout(function(){ if(!d.hidden) showQ(qi+1); else restart(); },DUR);
+  }
+  d.getElementById('qPrev').addEventListener('click',function(){ showQ(qi-1); });
+  d.getElementById('qNext').addEventListener('click',function(){ showQ(qi+1); });
+  qBox.addEventListener('mouseenter',function(){ paused=true; restart(); });
+  qBox.addEventListener('mouseleave',function(){ paused=false; restart(); });
+  qBox.addEventListener('focusin',function(){ paused=true; restart(); });
+  showQ(0);
+
+  /* map on click */
+  d.getElementById('mapBtn').addEventListener('click',function(){
+    var m=d.getElementById('map'), f=d.createElement('iframe');
+    f.src='https://www.google.com/maps?q=%CE%94%CE%AC%CE%B2%CE%BF%CF%85%20%CE%A3%CF%84%CE%B1%CF%85%CF%81%CE%BF%CF%8D%CE%BB%CE%B1%20%CE%9F%CF%86%CE%B8%CE%B1%CE%BB%CE%BC%CE%AF%CE%B1%CF%84%CF%81%CE%BF%CF%82%2C%20%CE%97%CF%81.%20%CE%A0%CE%BF%CE%BB%CF%85%CF%84%CE%B5%CF%87%CE%BD%CE%B5%CE%AF%CE%BF%CF%85%207%2C%20%CE%9D%CE%AD%CE%B1%20%CE%A0%CE%B5%CE%BD%CF%84%CE%AD%CE%BB%CE%B7&z=16&output=embed';
+    f.title=lang==='en'?'Map of the practice':'Χάρτης του ιατρείου'; f.loading='lazy'; f.referrerPolicy='no-referrer-when-downgrade';
+    m.innerHTML=''; m.appendChild(f);
+  });
+
+  /* EL / EN */
+  var META={el:{t:d.title,dsc:d.querySelector('meta[name=description]').content},
+            en:{t:'Ophthalmologist in Nea Penteli | Stavroula Davou',dsc:'Ophthalmic surgeon in Nea Penteli, Athens: cataract, laser vision correction, glaucoma, macula and paediatric eye care. Book your appointment.'}};
+  function setLang(l){
+    if(l===lang) return; lang=l;
+    d.querySelectorAll('[data-en]').forEach(function(el){ if(el.dataset.el==null) el.dataset.el=el.innerHTML; el.innerHTML = l==='en'?el.dataset.en:el.dataset.el; });
+    d.querySelectorAll('[data-en-aria]').forEach(function(el){ if(el.dataset.elAria==null) el.dataset.elAria=el.getAttribute('aria-label'); el.setAttribute('aria-label', l==='en'?el.dataset.enAria:el.dataset.elAria); });
+    d.querySelectorAll('[data-en-alt]').forEach(function(el){ if(el.dataset.elAlt==null) el.dataset.elAlt=el.alt; el.alt = l==='en'?el.dataset.enAlt:el.dataset.elAlt; });
+    root.lang=l; d.title=META[l].t; d.querySelector('meta[name=description]').content=META[l].dsc;
+    d.querySelectorAll('.lang button').forEach(function(b){ b.setAttribute('aria-pressed', b.dataset.lang===l); });
+    applySim();
+    try{ localStorage.setItem('davou-lang',l); }catch(e){}
+  }
+  d.querySelectorAll('.lang button').forEach(function(b){ b.addEventListener('click',function(){ setLang(b.dataset.lang); }); });
+  try{ if(localStorage.getItem('davou-lang')==='en') setLang('en'); }catch(e){}
+})();
+</script>
+</body>
+</html>
