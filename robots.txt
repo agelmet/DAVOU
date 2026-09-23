@@ -1,2 +1,4 @@
 User-agent: *
-Disallow: /
+Allow: /
+
+Sitemap: https://davou-ofthalmiatros.gr/sitemap.xml
